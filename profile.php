@@ -41,7 +41,8 @@ $userPostsQuery->execute(array(
         <div class="row justify-content-center mt-3">
             <div class="col-md-12">
                 <div class="card mb-3">
-                    <div class="card-header"><?php echo $dbOperations->getUser($getUserPosts['user_id'], $db)->username; ?></div>
+                    <div class="card-header"><?php echo $dbOperations->getUser($getUserPosts['user_id'], $db)->username; ?><div style="color: gray;"><?php echo $getUserPosts['post_time']; ?></div>
+                    </div>
                     <div class="card-body text-dark">
                         <p class="card-text"><?php echo $getUserPosts['post_text'] ?></p>
                     </div>
