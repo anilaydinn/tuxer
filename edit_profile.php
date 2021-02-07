@@ -28,11 +28,11 @@ $user = $dbOperations->getUser($_GET['user_id'], $db);
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" name="user_passwordone" class="form-control">
+                    <input type="password" name="user_passwordone" required class="form-control">
                 </div>
-                <div class="mb-3">
+                <div class=" mb-3">
                     <label class="form-label">Re-Password</label>
-                    <input type="password" name="user_passwordtwo" class="form-control">
+                    <input type="password" name="user_passwordtwo" required class="form-control">
                 </div>
                 <button type="submit" name="userUpdate" class="btn btn-dark">Update</button>
             </form>

@@ -17,7 +17,7 @@ $userPostsQuery->execute(array(
             <div class="bg-dark shadow rounded overflow-hidden">
                 <div class="px-4 pt-0 pb-4 cover">
                     <div class="media align-items-end profile-head">
-                        <div class="profile mr-3"><img src="data:image/png;base64, <?php echo base64_encode($user->image); ?>" alt="..." width="130" class="rounded mb-2 mt-3 img-thumbnail"><a href="edit_profile.php?user_id=<?php echo $_GET['user_id']; ?>" class="btn btn-outline-light btn-sm btn-block">Edit profile</a></div>
+                        <div class="profile mr-3"><?php if ($user->image == null) { ?><img style="display: none;" src="data:image/png;base64, <?php echo base64_encode($user->image); ?>" alt="..." width="130" class="rounded mb-2 mt-3 img-thumbnail"><?php } else { ?><img src="data:image/png;base64, <?php echo base64_encode($user->image); ?>" alt="..." width="130" class="rounded mb-2 mt-3 img-thumbnail"><?php } ?><a href="edit_profile.php?user_id=<?php echo $_GET['user_id']; ?>" class="btn btn-outline-light btn-sm btn-block">Edit profile</a></div>
                         <div class="media-body mb-5 text-white">
                             <h4 class="mt-0 mb-5"><?php echo $user->username; ?></h4>
                         </div>
