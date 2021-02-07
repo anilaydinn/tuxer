@@ -19,7 +19,8 @@
         <div class="row justify-content-center mt-3">
             <div class="col-md-12">
                 <div class="card mb-3">
-                    <div class="card-header"><?php if ($dbOperations->getUser($getPosts['user_id'], $db)->image == null) { ?><img style="display: none;" src="data:image/png;base64, <?php echo base64_encode($dbOperations->getUser($getPosts['user_id'], $db)->image); ?>" alt="..." width="50" class="rounded mb-2 mt-3 img mr-3"><?php } else { ?><img src="data:image/png;base64, <?php echo base64_encode($dbOperations->getUser($getPosts['user_id'], $db)->image); ?>" alt="..." width="50" class="rounded mb-2 mt-3 img mr-3"><?php } ?><?php echo $dbOperations->getUser($getPosts['user_id'], $db)->username; ?></div>
+                    <div class="card-header"><?php if ($dbOperations->getUser($getPosts['user_id'], $db)->image == null) { ?><img style="display: none;" src="data:image/png;base64, <?php echo base64_encode($dbOperations->getUser($getPosts['user_id'], $db)->image); ?>" alt="..." width="50" class="rounded mb-2 mt-3 img mr-3"><?php } else { ?><img src="data:image/png;base64, <?php echo base64_encode($dbOperations->getUser($getPosts['user_id'], $db)->image); ?>" alt="..." width="50" class="rounded mb-2 mt-3 img mr-3"><?php } ?><?php echo $dbOperations->getUser($getPosts['user_id'], $db)->username; ?><div><?php echo $getPosts['post_time']; ?></div>
+                    </div>
                     <div class="card-body text-dark">
                         <p class="card-text"><?php echo $getPosts['post_text']; ?></p>
                     </div>
