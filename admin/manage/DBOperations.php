@@ -109,8 +109,4 @@ class DBOperations
 
         return $count;
     }
-
-    function updateUser(User $user, PDO $db, $pw1, $pw2)
-    {
-    }
 }
