@@ -32,4 +32,34 @@ class Post
         $this->user_id = $user_id;
         $this->text = $text;
     }
+
+    function set_id($id)
+    {
+        $this->id = $id;
+    }
+
+    function get_id()
+    {
+        return $this->id;
+    }
+
+    function set_user_id($user_id)
+    {
+        $this->user_id = $user_id;
+    }
+
+    function get_user_id()
+    {
+        return $this->user_id;
+    }
+
+    function set_text($text)
+    {
+        $this->text = $text;
+    }
+
+    function get_text()
+    {
+        return $this->text;
+    }
 }
